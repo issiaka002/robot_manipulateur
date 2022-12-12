@@ -542,7 +542,6 @@ logo=ImageTk.PhotoImage(Image.open('yaya.jpg'))
 canvas=Canvas(frame5,width=largeur,height=hauteur)
 canvas.create_image(largeur/2,hauteur/2,image=logo)
 canvas.pack()
-
 #frame5.grid(row=1,column=2,sticky=E)
 
 frame.pack(expand=YES)
@@ -551,28 +550,16 @@ graphe = FigureCanvasTkAgg(schema, canvas)
 graphe.draw()
 graphe.get_tk_widget().pack()
 
-
-def enter(event):
-    tof = ['ferrari1.jpg', 'ferrari2.jpg', 'ferrari3.jpg', 'ferrari4.jpeg', 'ferrari5.jpg','ferrari6.jpg']
-    load = Image.open(f"{choice(tof)}")
-    photo = ImageTk.PhotoImage(load)
-    label_image.config(image=photo)
-    label_image.image=photo
-
-def out(event):
-    tof = ['ferrari1.jpg', 'ferrari2.jpg', 'ferrari3.jpg', 'ferrari4.jpeg', 'ferrari5.jpg','ferrari6.jpg']
-    load = Image.open(f"{choice(tof)}")
-    photo = ImageTk.PhotoImage(load)
-    label_image.config(image=photo)
-    label_image.image=photo
-
-load = Image.open("ferrari1.jpg")
-#load.show()
+load = Image.open("robot1.jpg")
 photo = ImageTk.PhotoImage(load)
 label_image=tkinter.Label(frame_parametre, image=photo)
-label_image.place(x=0,y=430)
-#label_image.bind("<Enter>", enter)
-#label_image.bind("<Leave>", out)
+label_image.place(x=-40,y=410)
 simulation.mainloop()
 
+
+load = Image.open("robot1.jpg")
+photo = ImageTk.PhotoImage(load)
+label_image=tkinter.Label(frame_parametre, image=photo)
+label_image.place(x=-40,y=410)
+simulation.mainloop()
 
